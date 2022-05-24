@@ -5,16 +5,28 @@ import Product from './Product';
 class Products extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {products: [], prevAd: -1}
+        this.state = {products: [], prevAd: -1, sort: 'size'}
+
+        this.getProducts = this.getProducts.bind(this)
+        this.sortProducts = this.sortProducts.bind(this)
     }
 
     componentDidMount() {
-        this.getProducts();
+        this.getProducts('size');
+    }
+
+    componentWillUpdate() {
+
+    }
+
+    sortProducts(sortBy) {
+        //this.setState({sort: 'price'})
+        this.getProducts(sortBy);
     }
     
-    getProducts() {
-        fetch('http://localhost:8000/products').then(res => res.json()).then((result) => {
-            
+    getProducts(sort) {
+        fetch(`http://localhost:8000/products?_sort=${sort}`).then(res => res.json()).then((result) => {
+            console.log(sort)
             let currAd;
             let productsList = [];
 
@@ -24,8 +36,6 @@ class Products extends React.Component {
                     
                     do {
                         currAd = Math.floor(Math.random()*1000)
-                        console.log(currAd)
-                        console.log(this.state.prevAd)
                     }while(currAd === this.state.prevAd)
                         
                     this.setState({prevAd: currAd});
@@ -49,9 +59,17 @@ class Products extends React.Component {
     
     render() {
         return (
-            <div id='products'>
-                <div id='productGrid'>
-                    {this.state.products}
+            <div>
+                <div>
+                    <p>Sort by:</p>
+                    <button className='sortButton' onClick={() => {this.sortProducts('size')}}>Size</button>
+                    <button className='sortButton' onClick={() => {this.sortProducts('price')}}>Price</button>
+                    <button className='sortButton' onClick={() => {this.sortProducts('id')}}>ID</button>
+                </div>
+                <div id='products'>
+                    <div id='productGrid'>
+                        {this.state.products}
+                    </div>
                 </div>
             </div>
         );
