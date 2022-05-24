@@ -4,9 +4,9 @@ Hello, I'm Christine Deticio. Thank you for the opportunity to take this technic
 
 To start the app
 ----
-1 Run `npm install` to install the dependencies.
-2 Run `npm run server` to start the server.
-3 Run `npm start` to start the app. The app can be accessed through localhost:3000.
+1. Run `npm install` to install the dependencies.
+2. Run `npm run server` to start the server.
+3. Run `npm start` to start the app. The app can be accessed through localhost:3000.
 
 Features implemented
 ----
