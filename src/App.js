@@ -5,7 +5,7 @@ function App() {
   return (
     <div className='App'>
       <header>
-          <h1>Old St. eCommerce Products</h1>
+          <h1>Old St eCommerce Products</h1>
 
           <div className='headerAd'>
             <p>But first, a word from our sponsors:</p>
