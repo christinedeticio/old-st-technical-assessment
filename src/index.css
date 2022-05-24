@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+}
+
+p {
+  margin: 15px;
+}
+
+.headerAd {
+  background-color: #faf7f7;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom:25px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.sortButtons {
+  padding-right: 20px;
+  padding-left: 160px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ad {
+  width: 320px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+}
+
+#productGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.productBox {
+  display: inline-block;
+  justify-content: center;
+  width: 320px;
+  height: 200px; 
+  border: 5px;
+  background-color: #faf7f7;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+  margin: 30px;
+  padding: 10px;
+}
+
+.size {
+  font-size: 13px;
+  color: #faf7f7;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  text-align: center;
+  height: 20px;
+  width: 50px;
+  border-radius: 15px;
+  background-color: #f58684;
+}
+
+.date {
+  color: #6e6d6d;
+  font-style: italic;
+  display: inline-flex;
+  justify-content: left;
+  position: relative;
+  top: 10px;
+  margin: 15px;
+
+}
+
+.price {
+  font-size: 25px;
+  display: inline-flex;
+  justify-content: right;
+  margin: 15px;
+}
+
+.ascii {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0.5px #bfbfbf;
+}
+
+.datePriceBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inactiveSortButton {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background-color: #faf7f7;
+  padding: 5px;
+  height: 35px;
+  width: 80px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px 0.5px #bfbfbf;
+  border: 0;
+  margin: 10px;
+}
+
+.activeSortButton {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: #faf7f7;
+  background-color: #f58684;
+  padding: 5px;
+  height: 35px;
+  width: 80px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px 0.5px #bfbfbf;
+  border: 0;
+  margin: 10px;
+}
+
+.endMessage {
+  text-align: center;
+  margin: 30px;
+  margin-left: 500px;
+  margin-right: 500px;
+  border-radius: 50px;
+  height: 25px;
+  padding: 5px;
+  color: #faf7f7;
+  background-color: #f58684;
+}
+
