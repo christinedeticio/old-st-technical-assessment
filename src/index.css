@@ -14,7 +14,7 @@ code {
 
 h1 {
   text-align: center;
-  margin: 30px;
+  margin: 50px;
 }
 
 p {
@@ -24,6 +24,9 @@ p {
 .headerAd {
   background-color: #faf7f7;
   box-shadow: 3px 3px 5px 1px #bfbfbf;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom:25px;
 }
 
 .ad {
@@ -31,7 +34,6 @@ p {
   height: 200px;
   border-radius: 15px;
   box-shadow: 3px 3px 5px 1px #bfbfbf;
-  margin: 20px;
 }
 
 #products {
