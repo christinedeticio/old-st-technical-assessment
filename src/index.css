@@ -12,6 +12,20 @@ code {
     monospace;
 }
 
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+p {
+  margin: 15px;
+}
+
+.headerAd {
+  background-color: #faf7f7;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+}
+
 .ad {
   width: 320px;
   height: 200px;
