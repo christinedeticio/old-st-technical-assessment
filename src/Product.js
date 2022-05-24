@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Product extends React.Component {
     constructor(props) {
@@ -13,10 +12,11 @@ class Product extends React.Component {
 
         let dayDiff = Math.floor((currDate.getTime() - productDate.getTime()) / (1000 * 60 * 60 * 24));
 
+        // checks if the difference is less than 1 week
         if(dayDiff < 7) {
             return dayDiff + (dayDiff === 1 ? " day ago" : " days ago");
         }
-        else {
+        else { // formats the date if it has been more than a week
             let dateString = productDate.toString().split(" ");
             return(dateString[1] + " " + dateString[2] + ", " + dateString[3])
         }

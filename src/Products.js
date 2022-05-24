@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Product from './Product';
 
 class Products extends React.Component {
@@ -13,10 +12,6 @@ class Products extends React.Component {
 
     componentDidMount() {
         this.getProducts('size');
-    }
-
-    componentWillUpdate() {
-
     }
 
     sortProducts(sortBy) {
@@ -37,14 +32,16 @@ class Products extends React.Component {
     
     getProducts(sort) {
         fetch(`http://localhost:8000/products?_sort=${sort}`).then(res => res.json()).then((result) => {
-            console.log(sort)
+            
             let currAd;
             let productsList = [];
 
+            // Adds products to a list
             for(let i=0; i < result.length; i++) {
               
                 if(i != 0 && i % 20 == 0) {
                     
+                    // checks if the ad chosen randomly is not the same as the previous ad
                     do {
                         currAd = Math.floor(Math.random()*1000)
                     }while(currAd === this.state.prevAd)
