@@ -14,9 +14,7 @@ function App() {
             alt='ad'/>
       </header>
 
-      products goes here..
       <Products />
-
     </div>
   );
   

@@ -12,22 +12,6 @@ code {
     monospace;
 }
 
-.productGrid {
-  display: grid;
-  grid-template-columns: auto;
-}
-
-.productBox {
-  display: inline-block;
-  width: 320px;
-  height: 200px;
-  border: 5px;
-  
-  border-radius: 15px;
-  box-shadow: 3px 3px 5px 1px #bfbfbf;
-  margin: 20px;
-}
-
 .ad {
   width: 320px;
   height: 200px;
@@ -35,3 +19,63 @@ code {
   box-shadow: 3px 3px 5px 1px #bfbfbf;
   margin: 20px;
 }
+
+#products {
+  display: flex;
+  justify-content: center;
+}
+
+#productGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.productBox {
+  display: inline-block;
+  justify-content: center;
+  width: 320px;
+  height: 200px; 
+  border: 5px;
+  background-color: #faf7f7;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+  margin: 30px;
+  padding: 10px;
+}
+
+.size {
+  margin: 15px;
+}
+
+.date {
+  color: #6e6d6d;
+  font-style: italic;
+  display: inline-flex;
+  justify-content: left;
+  margin: 15px;
+}
+
+.price {
+  font-size: 25px;
+  display: inline-flex;
+  justify-content: right;
+  margin: 15px;
+}
+
+.ascii {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0.5px #bfbfbf;
+}
+
+.datePriceBox {
+  display: flex;
+  justify-content: space-between;
+}
+

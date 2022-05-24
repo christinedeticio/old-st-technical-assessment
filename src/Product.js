@@ -23,17 +23,24 @@ class Product extends React.Component {
     }
     
     render() {
+
+        let productSize = {fontSize: this.props.size};
+
         return (
-            <div>
-                <div>
+            <div className='productBox'>
+                <div className='ascii' style={productSize}>
                     {this.props.face}
                 </div>
-                <div>
-                    {this.formatDate()}
-                </div>
-                <div>
+                <div className='size'>
                     {this.props.size} pixels
-                    ${this.props.price / 100}
+                </div>
+                <div className='datePriceBox'>
+                    <div className='date'>
+                        {this.formatDate()}
+                    </div>
+                    <div className='price'>
+                        ${(this.props.price / 100).toFixed(2)}
+                    </div>
                 </div>
             </div>
         );

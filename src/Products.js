@@ -31,7 +31,7 @@ class Products extends React.Component {
                     this.setState({prevAd: currAd});
 
                     productsList.push(<img
-                        className='ad'
+                        className='ad productBox'
                         src={`http://localhost:8000/ads/?r=${currAd}`}
                         alt='ad'/>)
                 }
@@ -49,11 +49,11 @@ class Products extends React.Component {
     
     render() {
         return (
-            <div id='productGrid'>
-            <div className='row'>
-                {this.state.products}
+            <div id='products'>
+                <div id='productGrid'>
+                    {this.state.products}
+                </div>
             </div>
-        </div>
         );
     }
 
