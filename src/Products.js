@@ -5,7 +5,7 @@ import Product from './Product';
 class Products extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {products: []}
+        this.state = {products: [], prevAd: -1}
     }
 
     componentDidMount() {
@@ -15,13 +15,24 @@ class Products extends React.Component {
     getProducts() {
         fetch('http://localhost:8000/products').then(res => res.json()).then((result) => {
             
-            let productsList = []
+            let currAd;
+            let productsList = [];
+
             for(let i=0; i < result.length; i++) {
               
                 if(i != 0 && i % 20 == 0) {
+                    
+                    do {
+                        currAd = Math.floor(Math.random()*1000)
+                        console.log(currAd)
+                        console.log(this.state.prevAd)
+                    }while(currAd === this.state.prevAd)
+                        
+                    this.setState({prevAd: currAd});
+
                     productsList.push(<img
                         className='ad'
-                        src={`http://localhost:8000/ads/?r=${Math.floor(Math.random()*1000)}`}
+                        src={`http://localhost:8000/ads/?r=${currAd}`}
                         alt='ad'/>)
                 }
               
