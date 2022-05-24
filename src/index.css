@@ -12,7 +12,26 @@ code {
     monospace;
 }
 
-.product {
+.productGrid {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.productBox {
+  display: inline-block;
+  width: 320px;
+  height: 200px;
   border: 5px;
-  border-radius: 20px;
+  
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+  margin: 20px;
+}
+
+.ad {
+  width: 320px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 1px #bfbfbf;
+  margin: 20px;
 }
