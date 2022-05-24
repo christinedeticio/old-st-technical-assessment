@@ -5,7 +5,7 @@ import Product from './Product';
 class Products extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {products: [], prevAd: -1, sort: 'size'}
+        this.state = {products: [], prevAd: -1, sort: 'size', sortBySize: true, sortByPrice: false, sortById: false}
 
         this.getProducts = this.getProducts.bind(this)
         this.sortProducts = this.sortProducts.bind(this)
@@ -20,7 +20,18 @@ class Products extends React.Component {
     }
 
     sortProducts(sortBy) {
-        //this.setState({sort: 'price'})
+
+        // Updates button UI
+        if(sortBy === 'size') {
+            this.setState({sortBySize: true, sortByPrice: false, sortById: false})
+        }
+        else if(sortBy === 'price') {
+            this.setState({sortBySize: false, sortByPrice: true, sortById: false})
+        }
+        else if(sortBy === 'id') {
+            this.setState({sortBySize: false, sortByPrice: false, sortById: true})
+        }
+
         this.getProducts(sortBy);
     }
     
@@ -62,9 +73,9 @@ class Products extends React.Component {
             <div>
                 <div>
                     <p>Sort by:</p>
-                    <button className='sortButton' onClick={() => {this.sortProducts('size')}}>Size</button>
-                    <button className='sortButton' onClick={() => {this.sortProducts('price')}}>Price</button>
-                    <button className='sortButton' onClick={() => {this.sortProducts('id')}}>ID</button>
+                    <button className={this.state.sortBySize ? 'activeSortButton' : 'inactiveSortButton'} onClick={() => {this.sortProducts('size')}}>Size</button>
+                    <button className={this.state.sortByPrice ? 'activeSortButton' : 'inactiveSortButton'} onClick={() => {this.sortProducts('price')}}>Price</button>
+                    <button className={this.state.sortById ? 'activeSortButton' : 'inactiveSortButton'} onClick={() => {this.sortProducts('id')}}>ID</button>
                 </div>
                 <div id='products'>
                     <div id='productGrid'>

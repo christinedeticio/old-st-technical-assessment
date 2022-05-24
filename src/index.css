@@ -105,11 +105,26 @@ p {
   justify-content: space-between;
 }
 
-.sortButton {
+.inactiveSortButton {
   display: inline-block;
   text-align: center;
   cursor: pointer;
   background-color: #faf7f7;
+  padding: 5px;
+  height: 35px;
+  width: 80px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px 0.5px #bfbfbf;
+  border: 0;
+  margin: 10px;
+}
+
+.activeSortButton {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: #faf7f7;
+  background-color: #f58684;
   padding: 5px;
   height: 35px;
   width: 80px;
