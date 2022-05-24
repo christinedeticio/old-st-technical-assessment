@@ -59,7 +59,16 @@ p {
 }
 
 .size {
-  margin: 15px;
+  font-size: 13px;
+  color: #faf7f7;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  text-align: center;
+  height: 20px;
+  width: 50px;
+  border-radius: 15px;
+  background-color: #f58684;
 }
 
 .date {
@@ -67,7 +76,10 @@ p {
   font-style: italic;
   display: inline-flex;
   justify-content: left;
+  position: relative;
+  top: 10px;
   margin: 15px;
+
 }
 
 .price {

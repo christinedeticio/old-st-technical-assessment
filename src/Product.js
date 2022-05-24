@@ -32,7 +32,7 @@ class Product extends React.Component {
                     {this.props.face}
                 </div>
                 <div className='size'>
-                    {this.props.size} pixels
+                    {this.props.size}px
                 </div>
                 <div className='datePriceBox'>
                     <div className='date'>
