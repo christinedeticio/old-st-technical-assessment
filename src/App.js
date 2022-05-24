@@ -17,6 +17,8 @@ function App() {
       </header>
 
       <Products />
+
+      <p className='endMessage'>~ end of catalogue ~</p>
     </div>
   );
   
