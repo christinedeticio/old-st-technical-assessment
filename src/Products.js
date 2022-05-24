@@ -71,7 +71,7 @@ class Products extends React.Component {
     render() {
         return (
             <div>
-                <div>
+                <div className='sortButtons'>
                     <p>Sort by:</p>
                     <button className={this.state.sortBySize ? 'activeSortButton' : 'inactiveSortButton'} onClick={() => {this.sortProducts('size')}}>Size</button>
                     <button className={this.state.sortByPrice ? 'activeSortButton' : 'inactiveSortButton'} onClick={() => {this.sortProducts('price')}}>Price</button>
